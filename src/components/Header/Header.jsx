@@ -7,4 +7,6 @@ const Header = ({ title = 'X-Files Characters' }) => (
 
 Header.propTypes = {
   title: PropTypes.string
-}
+};
+
+export default Header;

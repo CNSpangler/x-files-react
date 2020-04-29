@@ -5,11 +5,13 @@ import Home from '../../../containers/Home/Home.jsx';
 export default class App extends Component {
   render() {
     return (
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Home} />
-        </Switch>
-      </Router>
+      <>
+        <Router>
+          <Switch>
+            <Route path="/" component={Home} />
+          </Switch>
+        </Router>
+      </>
     );
   }
 }
