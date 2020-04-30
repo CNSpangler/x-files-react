@@ -1,22 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useRouteMatch } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Header from '../../components/Header/Header.jsx';
 import Character from '../../components/Character/Character.jsx';
 import { fetchCharacter } from '../../services/x-files-api.jsx';
 
 const Detail = () => {
   const [character, setCharacter] = useState({});
+  let { name } = useParams();
   
-  const match = useRouteMatch('/characters/:name');
+  // const match = useRouteMatch('/characters/:name');
   useEffect(() => {
-    fetchCharacter(match.params.name)
+    fetchCharacter(name)
       .then(character => setCharacter(character));
-  });
+  }, []);
 
   return (
     <>
       <Header />
+      <p>{character.name}</p>
       <Character character={character} />
     </>
   );

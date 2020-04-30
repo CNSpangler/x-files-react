@@ -12,7 +12,7 @@ export const fetchCharacters = () => {
 export const fetchCharacter = (name) => {
   return fetch(`https://xfiles-api.herokuapp.com/api/v1/characters/${name}`)
     .then(res => res.json())
-    .then(json => json({
+    .then(json => ({
       name: json[0].name.toUpperCase(),
       image: json[0].image,
       occupation: json[0].occupation,
