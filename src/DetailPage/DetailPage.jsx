@@ -12,10 +12,6 @@ const DetailPage = ({ character }) => (
 
 DetailPage.propTypes = {
   character: PropTypes.object.isRequired,
-  name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  occupation: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
 };
 
 export default DetailPage;
