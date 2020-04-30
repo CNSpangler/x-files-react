@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Character from '../../components/Character/Character.jsx';
+import Character from '../Character/Character.jsx';
 
 const Characters = ({ characters }) => {
   const characterElements = characters.map(character => (
-    <li key={character.id}>
+    <li key={character.name}>
       <Character {...character} />
     </li>
   ));
@@ -12,7 +12,8 @@ const Characters = ({ characters }) => {
   return (
     <ul>
       {characterElements}
-    </ul>);
+    </ul>
+  );
 };
 
 Characters.propTypes = {

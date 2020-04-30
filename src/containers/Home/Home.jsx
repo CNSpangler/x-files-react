@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../../components/Header/Header.jsx';
-import Characters from '../Characters/Characters.jsx';
+import Characters from '../../components/Characters/Characters.jsx';
 import { fetchCharacters } from '../../services/x-files-api.jsx';
 
 const Home = () => {
-  useEffect(async () => {
-    const characters = await fetchCharacters();
+  const [characters, setCharacters] = useState([]);
+  
+  useEffect(() => {
+    fetchCharacters()
+      .then(characters => setCharacters(characters));
   });
-
-  const [characters, setCharacters] = useState({ characters: [] });
 
   return (
     <>
