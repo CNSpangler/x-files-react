@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     fetchCharacters()
       .then(characters => setCharacters(characters));
-  });
+  }, []);
 
   return (
     <>
