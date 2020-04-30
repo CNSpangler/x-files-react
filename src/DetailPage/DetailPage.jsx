@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const DetailPage = ({ name = 'Who?', image = 'https://www.placecage.com/c/200/300', occupation = 'unknown', description = 'probably spooky' }) => (
+const DetailPage = ({ character }) => (
   <>
-    <h2>{name}</h2>
-    <h3>{occupation}</h3>
-    <img src={image} onError={(e)=>{e.target.src = 'https://www.placecage.com/c/200/300';}}/>
-    <p>{description}</p>
+    <h2>{character.name}</h2>
+    <h3>{character.occupation}</h3>
+    <img src={character.image} onError={(e)=>{e.target.src = 'https://www.placecage.com/c/200/300';}}/>
+    <p>{character.description}</p>
   </>
 );
 
 DetailPage.propTypes = {
+  character: PropTypes.object.isRequired,
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   occupation: PropTypes.string.isRequired,

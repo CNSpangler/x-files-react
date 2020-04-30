@@ -12,13 +12,12 @@ const Detail = () => {
   // const match = useRouteMatch('/characters/:name');
   useEffect(() => {
     fetchCharacter(name)
-      .then(character => setCharacter(character));
+      .then(character => setCharacter({ ...character }));
   }, []);
 
   return (
     <>
       <Header />
-      <p>{character.name}</p>
       <DetailPage character={character}/>
     </>
   );
