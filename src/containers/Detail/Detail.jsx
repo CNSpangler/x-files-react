@@ -8,7 +8,7 @@ import { fetchCharacter } from '../../services/x-files-api.jsx';
 const Detail = () => {
   const [character, setCharacter] = useState({});
   
-  const match = useRouteMatch('/:name');
+  const match = useRouteMatch('/characters/:name');
   useEffect(() => {
     fetchCharacter(match.params.name)
       .then(character => setCharacter(character));
