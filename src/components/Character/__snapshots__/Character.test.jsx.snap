@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Character component renders Character 1`] = `
+<Fragment>
+  <Link
+    key="Dana Scully"
+    to="/characters/Dana Scully"
+  >
+    <h2>
+      Dana Scully
+    </h2>
+    <h3>
+      FBI Agent
+    </h3>
+    <img
+      onError={[Function]}
+      src="https://vignette.wikia.nocookie.net/x-files/images/3/31/TXF_Scully.jpg/revision/latest/scale-to-width-down/310?cb=20171214040235"
+    />
+  </Link>
+</Fragment>
+`;
