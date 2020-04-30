@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import DetailPage from './DetailPage.jsx;
+import DetailPage from './DetailPage.jsx';
 
 describe('DetailPage component', () => {
   it('renders DetailPage', () => {
