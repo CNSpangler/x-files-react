@@ -7,10 +7,10 @@ import { fetchCharacter } from '../../services/x-files-api.jsx';
 
 const Detail = () => {
   const [character, setCharacter] = useState([]);
-  const params = useParams();
+  const { name } = useParams();
   
   useEffect(() => {
-    fetchCharacter()
+    fetchCharacter(name)
       .then(character => setCharacter(character));
   }, []);
 

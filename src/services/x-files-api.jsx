@@ -11,8 +11,8 @@ export const fetchCharacters = () => {
 
 export const fetchCharacter = (name) => {
   return fetch(`https://xfiles-api.herokuapp.com/api/v1/characters/${name}`)
-    .then(res => res.json())
-    .then(json => ({
+    .then(res => res.json)
+    .then(json => json[0]({
       name: json.name,
       image: json.image,
       occupation: json.occupation,
